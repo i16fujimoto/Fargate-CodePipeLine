@@ -77,12 +77,12 @@ resource "aws_route_table" "private_route_table_1c" {
 
 resource "aws_route_table_association" "private_subnet_1a_association" {
   route_table_id = aws_route_table.private_route_table_1a.id
-  subnet_id = aws_route_table.private_route_table_1a.id
+  subnet_id = aws_subnet.private_subnet_1a.id
 }
 
 resource "aws_route_table_association" "private_subnet_1c_association" {
   route_table_id = aws_route_table.private_route_table_1c.id
-  subnet_id = aws_route_table.private_route_table_1c.id
+  subnet_id = aws_subnet.private_subnet_1c.id
 }
 
 resource "aws_route" "private_route_1a" {
